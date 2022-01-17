@@ -2,7 +2,7 @@ package com.chicken2039.trackfromtarkov.domain.entities
 
 sealed class DomainEntity{
 
-    data class TaskEntitiy(
+    data class TaskEntity(
         val head : HeadEntitiy,
         var conditions : List<ConditionEntitiy>,
         var description : DescriptionEntitiy
@@ -32,6 +32,6 @@ sealed class DomainEntity{
 
     data class UserEntity(
         val uid : String,
-        var nowTask : List<TaskEntitiy>
+        var nowTask : List<TaskEntity>
     ){}
 }
