@@ -1,16 +1,17 @@
-package com.chicken2039.trackfromtarkov.domain.entities
+package com.chicken2039.trackfromtarkov.presentation.entities
 
-sealed class DomainEntity{
+
+sealed class PresentationEntity{
 
     data class TaskEntity(
-        val head : HeadEntitiy,
+        val title : TitleEntitiy,
         var conditions : List<ConditionEntitiy>,
         var description : DescriptionEntitiy
     ){
         var id = 0
     }
 
-    data class HeadEntitiy(
+    data class TitleEntitiy(
         val title : String,
         val trader : String,
         val dialogue : String,
@@ -27,7 +28,6 @@ sealed class DomainEntity{
         val text : String,
     ){
     }
-
     data class UserEntity(
         val uid : String,
         var nowTask : List<TaskEntity>

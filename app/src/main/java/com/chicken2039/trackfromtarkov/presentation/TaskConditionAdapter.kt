@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.chicken2039.trackfromtarkov.R
 
-class taskConditionAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
+class TaskConditionAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
 
     inner class ViewHolder(itemView:View):RecyclerView.ViewHolder(itemView){
         var listConditionView:RecyclerView

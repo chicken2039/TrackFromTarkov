@@ -7,33 +7,36 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.chicken2039.trackfromtarkov.R
 
-class taskAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class TaskAdapter : RecyclerView.Adapter<TaskAdapter.ViewHolder>() {
     //data
-
-    private val sampledata = "쇼어라인에서 준내 떄리기"
+    private val taskTitles = arrayOf("Debut","Stirrup","Shortage")
     inner class ViewHolder(itemView : View):RecyclerView.ViewHolder(itemView){
 
-        var listRecyclerView: RecyclerView
+        //val itemList: RecyclerView
+        val itemTask: TextView
 
         init {
-            listRecyclerView = itemView.findViewById(R.id.main_recycler)
-
+            //itemList = itemView.findViewById(R.id.main_recycler)
+            itemTask = itemView.findViewById(R.id.tasktitle_textview)
         }
 
     }
 
-    override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
+    override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
         val v = LayoutInflater.from(viewGroup.context).inflate(R.layout.item_task_recycler,viewGroup,false)
         return ViewHolder(v)
     }
 
-    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        TODO("Not yet implemented")
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        holder.itemTask.text=taskTitles[position]
     }
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+        return taskTitles.size
+
     }
+
+
 
 
 }

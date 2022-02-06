@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TrackFromTarkov">
         <activity
+            android:name=".presentation.test.Test_Activity"
+            android:exported="false"
+            android:label="@string/title_activity_test"
+            android:theme="@style/Theme.TrackFromTarkov.NoActionBar" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
